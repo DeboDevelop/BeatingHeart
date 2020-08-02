@@ -1,4 +1,5 @@
 import requests
+import datetime
 from .models import Website
 from .sendmail import sent_mail_up, sent_mail_down
 
@@ -14,6 +15,8 @@ def check_and_mail():
         try:
             #Senting the request to check whether the website is up or not
             r = requests.head(entry.url)
+            #Printing Data and Time For Logging Purpose
+            print(datetime.datetime.now()) 
             #If the website is up
             if r.status_code == 200:
                 #And the website should be down according to database
