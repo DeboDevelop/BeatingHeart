@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Calcutta'
 
 USE_I18N = True
 
@@ -122,10 +122,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Defines the cronjob
 CRONJOBS = [
-    ('*/2 * * * *', 'checker.cron.check_and_mail', config('LOG_FILE'))
+    ('*/5 * * * *', 'checker.cron.check_and_mail', config('LOG_FILE'))
 ]
 
+# Defines the email details
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST = config('EMAIL_HOST')
