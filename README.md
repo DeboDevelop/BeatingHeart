@@ -97,6 +97,10 @@ Python 3.6.9 or above
 
 11. Enjoy
 
-### Author
+## License
+
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details
+
+# Author
 
 [Debajyoti Dutta](https://github.com/DeboDevelop)
